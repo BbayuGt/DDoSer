@@ -12,7 +12,7 @@ or
 
 and then run it using
 ```bash
-$ python3 DDoSThiz.py
+$ python3 DDoSThis.py
 ```
 or
 ```bash
