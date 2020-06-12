@@ -1,13 +1,12 @@
 # DDoSer
 An Open-Sourced DDOS tools with python3
 # Installation
-This tool only need requests, install it using.
 ```bash
-$ pip install requests
+$ pip install -r requirements.txt
 ```
 or
 ```bash
-> python -m pip install requests
+> python -m pip install -r requirements.txt
 ```
 
 and then run it using
