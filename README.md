@@ -12,9 +12,9 @@ or
 
 and then run it using
 ```bash
-$ python3 DDoSer.py
+$ python3 DDoSThiz.py
 ```
 or
 ```bash
-> python DDoSer.py
+> python ddosthis.py
 ```
